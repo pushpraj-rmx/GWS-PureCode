@@ -357,13 +357,11 @@ a {
 	padding: 0;
 }
 
-
-
-
 img {
 	height: 100%; 
 	width: 100%; 
 	object-fit: contain;
+	border-radius: 20px;
 }
 
 .content {
