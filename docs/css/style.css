@@ -35,17 +35,17 @@ a {
 
 /*header*/
 .header {
-	position: absolute;
+	position: sticky;
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 99;
 	padding: 0px;
-	background-color: #fadfdf;
+	background-color: #fff6f6;
 }
 
 .header-main {
-	background-color: #fadfdf;
+	background-color: #fff6f6;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -326,19 +326,225 @@ a {
 	}
 }
 
-/* **************************************************************************************** */
-/* **************************************************************************************** */
-/* 
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-} */
+/* slider */
+@charset "UTF-8";
+/*---- NUMBER OF SLIDE CONFIGURATION ----*/
+.wrapper {
+  max-width: 60em;
+  margin: 1em auto;
+  position: relative;
+}
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-/* .sticky+.content {
-	padding-top: 60px;
-} */
+input {
+  display: none;
+}
+
+.inner {
+  width: 500%;
+  line-height: 0;
+}
+
+article {
+  width: 20%;
+  float: left;
+  position: relative;
+}
+article img {
+  width: 100%;
+}
+
+/*---- SET UP CONTROL ----*/
+.slider-prev-next-control {
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.slider-prev-next-control label {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.7;
+}
+.slider-prev-next-control label:hover {
+  opacity: 1;
+}
+
+.slider-dot-control {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+.slider-dot-control label {
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.slider-dot-control label:hover {
+  background: #ccc;
+  border-color: #777;
+}
+
+/* Info Box */
+.info {
+  position: absolute;
+  font-style: italic;
+  line-height: 20px;
+  opacity: 0;
+  color: #000;
+  text-align: left;
+  -webkit-transition: all 1000ms ease-out 600ms;
+  -moz-transition: all 1000ms ease-out 600ms;
+  transition: all 1000ms ease-out 600ms;
+}
+.info h3 {
+  color: #fcfff4;
+  margin: 0 0 5px;
+  font-weight: normal;
+  font-size: 1.5em;
+  font-style: normal;
+}
+.info.top-left {
+  top: 30px;
+  left: 30px;
+}
+.info.top-right {
+  top: 30px;
+  right: 30px;
+}
+.info.bottom-left {
+  bottom: 30px;
+  left: 30px;
+}
+.info.bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Slider Styling */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #666;
+  background: #fff;
+  background: #fcfff4;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+.slider-wrapper .inner {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/*---- SET POSITION FOR SLIDE ----*/
+#slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after, #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after, #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin: 0;
+  line-height: 38px;
+  font-size: 3em;
+  display: block;
+  color: #777;
+}
+
+#slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after, #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after {
+  content: "";
+  padding-left: 15px;
+}
+
+#slide5:checked ~ .slider-prev-next-control label:nth-child(1), #slide4:checked ~ .slider-prev-next-control label:nth-child(5), #slide3:checked ~ .slider-prev-next-control label:nth-child(4), #slide2:checked ~ .slider-prev-next-control label:nth-child(3), #slide1:checked ~ .slider-prev-next-control label:nth-child(2) {
+  display: block;
+  float: right;
+  margin-right: 5px;
+}
+
+#slide1:checked ~ .slider-prev-next-control label:nth-child(5), #slide5:checked ~ .slider-prev-next-control label:nth-child(4), #slide4:checked ~ .slider-prev-next-control label:nth-child(3), #slide3:checked ~ .slider-prev-next-control label:nth-child(2), #slide2:checked ~ .slider-prev-next-control label:nth-child(1) {
+  display: block;
+  float: left;
+  margin-left: 5px;
+}
+
+#slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after, #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after {
+  content: "";
+  padding-left: 8px;
+}
+
+#slide5:checked ~ .slider-dot-control label:nth-child(5), #slide4:checked ~ .slider-dot-control label:nth-child(4), #slide3:checked ~ .slider-dot-control label:nth-child(3), #slide2:checked ~ .slider-dot-control label:nth-child(2), #slide1:checked ~ .slider-dot-control label:nth-child(1) {
+  background: #333;
+}
+
+#slide5:checked ~ .slider-wrapper article:nth-child(5) .info, #slide4:checked ~ .slider-wrapper article:nth-child(4) .info, #slide3:checked ~ .slider-wrapper article:nth-child(3) .info, #slide2:checked ~ .slider-wrapper article:nth-child(2) .info, #slide1:checked ~ .slider-wrapper article:nth-child(1) .info {
+  opacity: 1;
+}
+
+#slide1:checked ~ .slider-wrapper .inner {
+  margin-left: 0%;
+}
+#slide2:checked ~ .slider-wrapper .inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ .slider-wrapper .inner {
+  margin-left: -200%;
+}
+#slide4:checked ~ .slider-wrapper .inner {
+  margin-left: -300%;
+}
+#slide5:checked ~ .slider-wrapper .inner {
+  margin-left: -400%;
+}
+/*---- TABLET ----*/
+@media only screen and (max-width: 850px) and (min-width: 450px) {
+  .slider-wrapper {
+    border-radius: 0;
+  }
+}
+/*---- MOBILE----*/
+@media only screen and (max-width: 450px) {
+  .slider-wrapper {
+    border-radius: 0;
+  }
+
+  .slider-wrapper .info {
+    opacity: 0;
+  }
+}
+@media only screen and (min-width: 850px) {
+  body {
+    padding: 0 80px;
+  }
+}
+/* slider */
+
+
 
 .wrapper
 {
@@ -364,21 +570,16 @@ a {
 	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
 
-
-
-
 .big-card {
 	padding: 10px 25px;
-	background-color: #fadfdf;
-	border-radius: 20px;
+	background-color: #fff6f6;
+	border-radius: 10px;
 	text-align: center;
 	margin-bottom: 20px;
 }
 
-
-
 .blank-space {
-	background-color: #fadfdf;
+	background-color: #fff6f6;
 	height: 120px;
 	padding: 40px;
 
@@ -400,12 +601,14 @@ img {
 	height: 100%; 
 	width: 100%; 
 	object-fit: cover;
-	border-radius: 20px;
+	border-radius: 10px;
 }
 
 .sub-heading {
 	text-transform: capitalize;
 	text-align: left;
+	font-weight: 300;
+	margin-bottom: 1em;
 }
 .underline {
 	object-fit: contain;
@@ -414,25 +617,31 @@ img {
 p {
 	text-align: left;
 	font-family: 'Comfortaa', cursive;
+	color: #333333;
+	line-height: 2.2em;
 }
 .h1-heading {
 	text-align: center;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Comfortaa', cursive;
+	color: #333333;
 }
 
 .main-heading {
-	font-family: 'Playfair Display', serif;
-	font-weight: 900;
-	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	color: #333333;
+	font-weight: 300;
+	text-align: left;
 }
 
 /* .new-main-heading {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Comfortaa', cursive;
+	color: #333333;
 	color: black;
 	font-size: 5em;
 } */
 .h6-heading {
 	font-family: 'Comfortaa', cursive;
+	color: #333333;
 	text-align: center;
 font-size: 1em;
 }
@@ -442,9 +651,128 @@ font-size: 1em;
 }
 
 .header-section {
-	background-color: #fadfdf;
+	background-color: #fff6f6;
 }
 
 .section-page-title {
 	padding: 80px 0;
 }
+
+
+.text {
+	padding-right: 1em;
+}
+
+#page-header {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#aim-process {
+	font-size: 1.4em;
+	background-image: linear-gradient(to right, #ffecec, #00000000, #00000000);
+}
+
+
+
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+/* Base styles */
+.or::before,
+.or::after {
+    content: "";
+}
+
+/* 
+    Vertical 
+    Requires a height to be set on this element or its parent.
+*/
+.or--y {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+/* 
+    Absolutely position each pseudo element, and calculate
+    a height shorter than 50% using em units to create space
+    around the text and allows divider line height to scale 
+    based on parent element divider height.
+*/
+.or--y::before,
+.or--y::after {
+    position: absolute;
+    border-left: 1px solid #ccc;
+    height: calc(50% - 0.85em);
+    left: 50%;
+    margin-left: -1px;
+}
+
+/* ::before on top */
+.or--y::before {
+    top: 0;
+}
+
+/* ::after on bottom */
+.or--y::after {
+    bottom: 0;
+}
+
+/* Horizontal */
+.or--x::before,
+.or--x::after {
+    position: relative;
+    border-top: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    margin-bottom: 0.15em;
+    overflow: hidden;
+}
+
+.or--x::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.or--x::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/* Demo styles */
+.section-divider {
+    margin: 4em 1em;
+    text-align: center;
+}
+
+.section-divider .or {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #828282;
+    font-size: 0.75em;
+    margin: 4em auto;
+}
+
+.section-divider .or--x {
+    max-width: 30em;
+}
+
+.section-divider .or--y {
+    height: 4em;
+}
+
+
+.small-card {
+	box-sizing: border-box;
+	background-color: #fff6f6;
+	padding: 1em;
+	margin-top: 20px;
+}
+
+
