@@ -491,20 +491,44 @@ article img {
 .big-card {
 	padding: 10px 25px;
 	background-color: #fff6f6;
-	border-radius: 10px;
+	border-radius: 12px;
 	text-align: center;
 	margin-bottom: 20px;
 }
 
 .preheader {
-	background-color: #000000;
+	position: sticky;
+	background-color: #242424;
+	padding: 15px;
+	color: white;
+
 }
 
+.preheader a {
+	color: white;
+
+}
+
+.preheader-right {
+	text-align: right;
+	/* border: solid 2px red; */
+}
+
+.preheader-left {
+	text-align: left;
+}
+
+
+.nav-button {
+	background-color: #000;
+	padding: 10px;
+	border: 1px solid white;
+	font-family: 'Comfortaa', sans-serif, cursive;
+}
 
 .image {
 	margin: 0;
 	padding-top: 20px;
-
 }
 
 .content {
@@ -789,6 +813,7 @@ a {
 	color: #00aced;
 }
 
+
 .social-icons {
 	text-align: center;
 	margin-top: -2em;
@@ -905,10 +930,35 @@ a .primary-button:hover {
 }
 
 .image-70 {
-height: 50vh;
+	height: 50vh;
 }
 
 
 .class01 {
 	padding: 50px;
+text-align: center;
+}
+
+.service-icon {
+	height: 60px;
+	width: auto;
+}
+
+.class01 p {
+	text-align: center;
+}
+
+
+.top-border {
+	border-top: 2px solid rgb(219, 219, 219);
+}
+
+.left-right-border {
+	border-right: 2px solid rgb(219, 219, 219);
+	border-left: 2px solid rgb(219, 219, 219);
+}
+
+.class01:hover {
+	background-color: rgb(255, 255, 255);
+	cursor: pointer;
 }
