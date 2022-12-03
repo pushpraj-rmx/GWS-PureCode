@@ -533,7 +533,7 @@ img {
 
 p {
 	text-align: left;
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Montserrat', sans-serif;
 	color: #333333;
 	line-height: 2.2em;
 }
@@ -692,6 +692,9 @@ body {
 	margin-top: 20px;
 }
 
+.small-card img {
+	border-radius: 0;
+}
 
 
 
@@ -834,27 +837,24 @@ a .primary-button:hover {
 
 }
 
-
-
-
-
 .test-section {
 	background-color: aqua;
 }
 
 .shadow-wrapper {
-	padding: 20px;
-	margin: 20px;
+	/* padding: 20px; */
+	/* margin: 20px; */
+	padding: 3vw;
 }
 
 
 .service-heading {
-	font-family: 'Allura', cursive;
-	font-size: 3em;
+	font-family: 'Comfortaa', cursive;
+	font-size: 2.3em;
 }
 
 .light-pink-bg {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(252, 240, 229);
 	/* overflow: hidden; */
 	box-sizing: border-box;
 	margin: 0;
@@ -878,7 +878,7 @@ a .primary-button:hover {
 
 
 .not-light-pink-bg {
-	background-color: rgb(255, 235, 249);
+	background-color: rgb(255, 247, 240);
 	/* overflow: hidden; */
 	box-sizing: border-box;
 	margin: 0;
@@ -902,4 +902,13 @@ a .primary-button:hover {
 
 .splendid-heading {
 	padding-top: 1.3em;
+}
+
+.image-70 {
+height: 50vh;
+}
+
+
+.class01 {
+	padding: 50px;
 }
