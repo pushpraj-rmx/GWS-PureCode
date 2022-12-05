@@ -13,9 +13,6 @@ body.hidden-scrolling {
 	overflow-y: hidden;
 }
 
-
-
-
 * {
 	margin: 0;
 	/* box-sizing: border-box; */
@@ -375,6 +372,30 @@ div#captioned-gallery {
 	width: 100%;
 	overflow: hidden;
 }
+
+div#captioned-gallery-review{
+	width: 50%;
+	overflow: hidden;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	margin: auto;
+}
+
+
+
+div#captioned-gallery-portfolio{
+	width: 50%;
+	overflow: hidden;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	margin: auto;
+}
+
+
+
+
 
 div.slider {
 	position: relative;
@@ -937,6 +958,13 @@ a .primary-button:hover {
 .class01 {
 	padding: 50px;
 text-align: center;
+/* transition:  ease-in-out .5s; */
+transition: linear .5s;
+}
+
+.class01:hover {
+	background-color: rgb(255, 245, 232);
+	cursor: pointer;
 }
 
 .service-icon {
@@ -958,7 +986,16 @@ text-align: center;
 	border-left: 2px solid rgb(219, 219, 219);
 }
 
-.class01:hover {
-	background-color: rgb(255, 255, 255);
-	cursor: pointer;
+
+
+.slide-container  {
+	width: 50vw;
+}
+
+.slide-container img {
+
+}
+
+#left-aligned {
+	text-align: left;
 }
