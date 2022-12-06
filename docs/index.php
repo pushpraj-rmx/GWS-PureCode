@@ -12,6 +12,11 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
+   <!-- Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- Owl Carousel -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,76 +37,44 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
    <!-- Custom Style Sheet -->
-   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./carousel.css">
 </head>
 
 <body>
 
    </head>
    <?php include 'header.php';?>
-
-
    <div class="owl-carousel owl-theme">
       <div class="slide-p slide-1">
-         <div class="slide-content">
+         <!-- <div class="slide-content">
             <p>STEP INTO A WORLD OF </p>
             <h1> Tranquility</h1>
-            <p> LEAVING THE NOISE OF THE WORLD BEHIND...</p>
-
-            <!-- <button>Subscribe</button> -->
-         </div>
+            <p> LEAVING THE NOISE OF THE WORLD BEHIND...</p>            
+         </div> -->
       </div>
       <div class="slide-p slide-2">
-         <div class="slide-content">
-
+         <!-- <div class="slide-content">
             <p>RELAX AND CONNECT BACK TO THE</p>
             <h1>Purity,</h1>
             <p>OF YOUR SOUL</p>
-
-            <!-- <button>Comment</button> -->
-         </div>
+         </div> -->
       </div>
       <div class="slide-p slide-3">
-         <div class="slide-content">
+         <!-- <div class="slide-content">
             <p>REDISCOVER THE </p>
             <h1>Elegance </h1>
             <p>AND BEAUTY INSIDE AND OUTSIDE OF YOU</p>
-            <!-- <button>Like & Share</button> -->
-         </div>
+         </div> -->
       </div>
       <div class="slide-p slide-4">
-         <div class="slide-content">
+         <!-- <div class="slide-content">
             <p>SET FREE/UNLOCK THE REAL YOU AND EXPERIENCE</p>
             <h1>Bliss </h1>
             <p>AND BEAUTY INSIDE AND OUTSIDE OF YOU</p>
-            <!-- <button>Like & Share</button> -->
-         </div>
+         </div> -->
       </div>
-
    </div>
-
-   <!-- Jquery -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <!-- Owl Carousel -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
    <!-- Custom Javascript -->
-   <script>
-      $(document).ready(function () {
-         $(".owl-carousel").owlCarousel({
-            items: 1,
-            loop: true,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            smartSpeed: 1500,
-            autoplayHoverPause: true
-         });
-      });
-   </script>
-
-
-
    <!-- p-slider -->
    <!--  -->
 
@@ -283,6 +256,99 @@
          </div>
       </div>
    </section>
+   <!-- <section class="testimonials">
+   <div class="container-fluid">
+      <div class="row">
+         <div id="carouselExampleFade" class="carousel slide carousel-fade col-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/fare.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/Girl-bkp.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/placeholder-3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
+          <div id="carouselExampleFade" class="carousel slide carousel-fade col-7" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/fare.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/Girl-bkp.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/logo.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+ -->
+
+   <!-- <div class="col-4 collage-1" >
+
+         </div>
+         <div class="col-3 collage-2" >
+
+         </div>
+         <div class="col-5 collage-3" >
+
+         </div>
+         <div class="col-6 collage-4" >
+
+         </div>
+         <div class="col-6 collage-5" >
+
+         </div>
+         <div class="col-5 collage-6" >
+
+         </div> -->
+   <!-- </div>
+   </div>
+</section>
+ -->
+   <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+       <img src="/img/fare.jpeg" class="d-block w-100" alt="...">
+     </div>
+     <div class="carousel-item">
+       <img src="./img/Girl-bkp.jpg" class="d-block w-100" alt="...">
+     </div>
+     <div class="carousel-item">
+       <img src="..." class="d-block w-100" alt="...">
+     </div>
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+   </button>
+ </div>
+
+ -->
    <!-- <section>
       <div class="container">
          <h3 class="service-heading" id="left-aligned">
@@ -336,13 +402,28 @@
          </div>
       </div>
    </section> -->
+   <!-- <div class="Collage effect-parent">
+      <img src="./img/f6bd8cf2-6c3f-4175-9c42-a5178970030b.jpeg">
+      <img src="./img/Girl-bkp.jpg">
+      <img src="./img/Lotus.jpg">
+      <img src="./img/Girl-bkp.jpg">
+      <img src="./img/Lotus.jpg">
+      <img src="./img/Girl-bkp.jpg">
+      <img src="./img/Lotus.jpg">
+      <img src="./img/Girl-bkp.jpg">
+      <img src="./img/Lotus.jpg">
+      <img src="./img/Girl-bkp.jpg">
+   </div>
 
-   <!-- home section end -->
+   <p class="footnote"><a href="https://ed-lea.github.io/jquery-collagePlus/">CollagePlus</a> for jQuery by <a
+         href="https://twitter.com/ed_lea">@ed_lea</a></p>
+ -->
 
    <?php include 'footer.php';?>
 
    <script src="./js/myscript.js"></script>
    <script src="./js/carousel.js"></script>
+   <script src="./js/collage.js"></script>
 </body>
 
 </html>

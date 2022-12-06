@@ -36,12 +36,13 @@ a {
 
 /*header*/
 .header {
-	position: sticky;
+	/* position: sticky; */
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 99;
 	padding: 0px;
+	background-color: #000000 !important;
 }
 
 .header-main {
@@ -55,7 +56,7 @@ a {
 }
 
 #glogo {
-	height: 96px;
+	height: 56px;
 }
 
 .header .logo {
@@ -518,7 +519,7 @@ article img {
 }
 
 .preheader {
-	position: sticky;
+	/* position: sticky; */
 	background-color: #242424;
 	padding: 15px;
 	color: white;

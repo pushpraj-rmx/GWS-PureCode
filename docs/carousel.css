@@ -117,3 +117,65 @@
 #what-set-us {
     padding-top: 30px;
 }
+
+
+.collage-1 {
+    box-sizing: border-box;
+    height: 480px;
+    background-color: aquamarine;
+    padding: 20px;
+    border: #fff solid 2px;
+    /* margin: 20px; */
+}
+.collage-2 {
+    box-sizing: border-box;
+    height: 480px;
+    background-color: rgb(185, 207, 59);
+    padding: 20px;
+    border: #fff solid 2px;
+    /* margin: 20px; */
+}
+.collage-3 {
+    box-sizing: border-box;
+    height: 480px;
+    background-color: rgb(142, 111, 255);
+    padding: 20px;
+    border: #fff solid 2px;
+    /* margin: 20px; */
+}
+
+.collage-4 {
+    box-sizing: border-box;
+    height: 480px;
+    background-color: rgb(245, 194, 84);
+    padding: 20px;
+    border: #fff solid 2px;
+    /* margin: 20px; */
+}
+
+.collage-5 {
+    box-sizing: border-box;
+    height: 480px;
+    background-color: rgb(209, 91, 245);
+    padding: 20px;
+    border: #fff solid 2px;
+    /* margin: 20px; */
+}
+.collage-6 {
+    box-sizing: border-box;
+    height: 480px;
+    background-color: rgb(245, 127, 91);
+    padding: 20px;
+    border: #fff solid 2px;
+    /* margin: 20px; */
+}
+
+
+.class01 p {
+    text-align: justify;
+}
+
+.class01 ol {
+    text-align: left;
+    list-style: circle;
+}

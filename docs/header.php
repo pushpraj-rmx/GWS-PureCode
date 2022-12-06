@@ -1,4 +1,4 @@
-<header class="header header-wrapper sticky" id=" navbar">
+<header class="header header-wrapper" id=" navbar">
       <section class="preheader header" id="navbar">
          <div class="row">
             <div class="col-6 preheader-left">
@@ -16,7 +16,7 @@
          </div>
       </section>
       <!-- <div class="container-fluid"> -->
-      <div class="header-main ">
+      <div class="header-main">
          <div class="logo">
             <a href="#"> <img src="img/logo.png" id="glogo" alt=""> </a>
          </div>
